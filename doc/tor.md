@@ -1,4 +1,4 @@
-TOR SUPPORT IN LITECOIN
+TOR SUPPORT IN BEYONDCOIN
 ======================
 
 It is possible to run Beyondcoin as a Tor hidden service, and connect to such services.
