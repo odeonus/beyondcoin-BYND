@@ -31,7 +31,7 @@ NetworkStyle::NetworkStyle(const QString &_appName, const int iconColorHueShift,
     if (std::char_traits<char>::length(_titleAddText) == 0) {
         pixmap.load(":/icons/bitcoin");
     } else {
-        pixmap.load(":/icons/beyondcoin_splash");
+        pixmap.load(":/icons/bitcoin_splash");
     }
 
     if(iconColorHueShift != 0 && iconColorSaturationReduction != 0)
