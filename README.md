@@ -1,7 +1,9 @@
 Beyondcoin Core integration/staging tree
 =====================================
 
-[![Build Status](https://travis-ci.org/beyondcoin-project/beyondcoin.svg?branch=master)](https://travis-ci.org/beyondcoin-project/beyondcoin)
+[![Build Status](https://travis-ci.org/Tech1k/beyondcoin.svg?branch=master)](https://travis-ci.org/Tech1k/beyondcoin)
+[![Build status](https://ci.appveyor.com/api/projects/status/qxam58ebbuw42my0?svg=true)](https://ci.appveyor.com/project/Tech1k/beyondcoin-i7gkc)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 https://beyondcoin.org
 
