@@ -210,7 +210,7 @@ public:
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
         vSeeds.emplace_back("testnet-seed.beyonddata.llc", true);
-        vSeeds.emplace_back("bynd-test-dns1.beyonddata.llc", true)
+        vSeeds.emplace_back("bynd-test-dns1.beyonddata.llc", true);
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,85);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196);
