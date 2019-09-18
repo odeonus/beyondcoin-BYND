@@ -7,7 +7,7 @@ and performance improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at github:
 
-  <https://github.com/beyondcoin-project/beyondcoin/issues>
+  <https://github.com/Tech1k/beyondcoin/issues>
 
 To receive security and update notifications, please subscribe to:
 
