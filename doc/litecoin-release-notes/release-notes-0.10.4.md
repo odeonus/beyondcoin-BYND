@@ -8,7 +8,7 @@ recommended to upgrade to this version as soon as possible.
 
 Please report bugs using the issue tracker at github:
 
-  <https://github.com/beyondcoin-project/beyondcoin/issues>
+  <https://github.com/Tech1k/beyondcoin/issues>
 
 Upgrading and downgrading
 =========================
