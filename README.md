@@ -1,23 +1,16 @@
-Beyondcoin Core integration/staging tree
+Beyondcoin Core integration/staging tree [BYND, Ƀ]
 =====================================
 
 [![Build Status](https://travis-ci.org/Tech1k/beyondcoin.svg?branch=master)](https://travis-ci.org/Tech1k/beyondcoin)
 [![Build status](https://ci.appveyor.com/api/projects/status/qxam58ebbuw42my0?svg=true)](https://ci.appveyor.com/project/Tech1k/beyondcoin-i7gkc)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-https://beyondcoin.org
-
 What is Beyondcoin?
 ----------------
 
-Beyondcoin is an experimental digital currency that enables instant payments to
-anyone, anywhere in the world. Beyondcoin uses peer-to-peer technology to operate
-with no central authority: managing transactions and issuing money are carried
-out collectively by the network. Beyondcoin Core is the name of open source
-software which enables the use of this currency.
+Beyondcoin is a cryptocurrency like Bitcoin, although it does not use SHA256 as its proof of work (POW). Taking development cues from Tenebrix, Litecoin, and Dogecoin. Beyondcoin currently employs a simplified variant of scrypt.
 
-For more information, as well as an immediately useable, binary version of
-the Beyondcoin Core software, see [https://beyondcoin.org](https://beyondcoin.org).
+[https://beyondcoin.org](https://beyondcoin.org).
 
 License
 -------
@@ -39,6 +32,12 @@ should be used to discuss complicated or controversial changes before working
 on a patch set.
 
 Developer IRC can be found on Freenode at #beyondcoin-dev.
+
+Ports
+-----
+[MAINNET] RPC: 10332 P2P: 10333
+
+[TESTNET] RPC: 14332 P2P: 14333
 
 Testing
 -------
