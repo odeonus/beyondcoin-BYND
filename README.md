@@ -8,7 +8,7 @@ Beyondcoin Core integration/staging tree [BYND, Ƀ]
 What is Beyondcoin?
 ----------------
 
-Beyondcoin is a cryptocurrency like Bitcoin, although it does not use SHA256 as its proof of work (POW). Taking development cues from Tenebrix, Litecoin, and Dogecoin. Beyondcoin currently employs a simplified variant of scrypt.
+Beyondcoin is a cryptocurrency like Bitcoin, although it does not use SHA256 as its proof of work (POW). Instead, Beyondcoin uses a variant of Scrypt as its proof of work (POW). Taking development cues from Tenebrix, Litecoin, and Dogecoin. Beyondcoin currently employs a simplified variant of scrypt.
 
 [https://beyondcoin.org](https://beyondcoin.org).
 
