@@ -1,5 +1,5 @@
 Beyondcoin Core integration/staging tree [BYND, Ƀ]
-=====================================
+==================================================
 
 [![Build Status](https://travis-ci.org/Tech1k/beyondcoin.svg?branch=master)](https://travis-ci.org/Tech1k/beyondcoin)
 [![Build status](https://ci.appveyor.com/api/projects/status/qxam58ebbuw42my0?svg=true)](https://ci.appveyor.com/project/Tech1k/beyondcoin-i7gkc)
@@ -8,7 +8,7 @@ Beyondcoin Core integration/staging tree [BYND, Ƀ]
 What is Beyondcoin?
 ----------------
 
-Beyondcoin is a cryptocurrency like Bitcoin, although it does not use SHA256 as its proof of work (POW). Instead, Beyondcoin uses a variant of Scrypt as its proof of work (POW). Taking development cues from Tenebrix, Litecoin, and Dogecoin. Beyondcoin currently employs a simplified variant of scrypt.
+Beyondcoin is a peer-to-peer network based digital currency based off of the fundamentals of Bitcoin, although it does not use SHA256 as its proof of work. Instead, Beyondcoin currently empolys a simplified variant of Scrypt as its proof of work (POW). Taking development cues from Tenebrix, Litecoin, and Dogecoin. Peer-to-peer (P2P) means that there is no central authority to issue new money or keep track of transactions. Instead, these tasks are managed collectively by the nodes of the network.
 
 [https://beyondcoin.org](https://beyondcoin.org).
 
