@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
       - name: beyondcoin
-        image: Tech1k/beyondcoin
+        image: beyondcoin-project/beyondcoin
         ports:
         - containerport: 10333
           name: beyondcoin

@@ -1,8 +1,8 @@
 Beyondcoin Core integration/staging tree [BYND, Ƀ]
 ==================================================
 
-[![Build Status](https://travis-ci.org/Tech1k/beyondcoin.svg?branch=master)](https://travis-ci.org/Tech1k/beyondcoin)
-[![Build status](https://ci.appveyor.com/api/projects/status/qxam58ebbuw42my0?svg=true)](https://ci.appveyor.com/project/Tech1k/beyondcoin-i7gkc)
+[![Build Status](https://travis-ci.org/beyondcoin-project/beyondcoin.svg?branch=master)](https://travis-ci.org/beyondcoin-project/beyondcoin)
+[![Build status](https://ci.appveyor.com/api/projects/status/qxam58ebbuw42my0?svg=true)](https://ci.appveyor.com/project/beyondcoin-project/beyondcoin-i7gkc)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 What is Beyondcoin?
@@ -10,7 +10,7 @@ What is Beyondcoin?
 
 Beyondcoin is free open source peer-to-peer network based digital currency employing the fundamentals of Bitcoin, although it does not use SHA256 as its proof of work. Instead, Beyondcoin currently empolys a simplified variant of Scrypt as its proof of work (POW). Taking development cues from Tenebrix, Litecoin, and Dogecoin. Peer-to-peer (P2P) means that there is no central authority to issue new money or keep track of transactions. Instead, these tasks are managed collectively by the nodes of the network.
 
-[https://beyondcoin.org](https://beyondcoin.org).
+[https://beyondcoin.beyonddata.llc](https://beyondcoin.beyonddata.llc).
 
 License
 -------
@@ -22,7 +22,7 @@ Development Process
 -------------------
 
 The `master` branch is regularly built and tested, but is not guaranteed to be
-completely stable. [Tags](https://github.com/Tech1k/beyondcoin/tags) are created
+completely stable. [Tags](https://github.com/beyondcoin-project/beyondcoin/tags) are created
 regularly to indicate new official, stable release versions of Beyondcoin Core.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).

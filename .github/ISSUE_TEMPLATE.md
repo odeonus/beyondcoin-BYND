@@ -2,9 +2,9 @@
 
 This issue tracker is only for technical issues related to beyondcoin-core.
 
-General beyondcoin questions and/or support requests and are best directed to the [beyondcointalk.io forums](https://beyondcointalk.io/).
+General beyondcoin questions and/or support requests and are best directed to the [forums.beyonddata.llc forums](http://forums.beyonddata.llc/).
 
-For reporting security issues, please contact the Beyondcoin developers on the #beyondcoin-dev Freenode IRC channel or alternatively you can email us at contact@beyondcoin.org.
+For reporting security issues, please contact the Beyondcoin developers on the #beyondcoin-dev Freenode IRC channel or alternatively you can email us at support@beyonddata.llc.
 
 ### Describe the issue
 

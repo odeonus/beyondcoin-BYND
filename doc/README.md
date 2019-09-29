@@ -5,7 +5,7 @@ Setup
 ---------------------
 Beyondcoin Core is the original Beyondcoin client and it builds the backbone of the network. It downloads and, by default, stores the entire history of Beyondcoin transactions (which is currently more than 7 GBs); depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
 
-To download Beyondcoin Core, visit [beyondcoin.org](https://beyondcoin.org).
+To download Beyondcoin Core, visit [beyondcoin.beyonddata.llc](https://beyondcoin.beyonddata.llc).
 
 Running
 ---------------------
@@ -28,10 +28,10 @@ Drag Beyondcoin-Core to your applications folder, and then run Beyondcoin-Core.
 
 ### Need Help?
 
-* See the documentation at the [Beyondcoin Wiki](https://beyondcoin.info/)
+* See the documentation at the [Beyondcoin Wiki](https://bynd-wiki.beyonddata.llc/)
 for help and more information.
 * Ask for help on [#beyondcoin](http://webchat.freenode.net?channels=beyondcoin) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=beyondcoin).
-* Ask for help on the [BeyondcoinTalk](https://beyondcointalk.io/) forums.
+* Ask for help on the [Beyondcoin Forums](https://forums.beyonddata.llc/).
 
 Building
 ---------------------
@@ -61,7 +61,7 @@ The Beyondcoin repo's [root README](/README.md) contains relevant information on
 - [Benchmarking](benchmarking.md)
 
 ### Resources
-* Discuss on the [BeyondcoinTalk](https://beyondcointalk.io/) forums.
+* Discuss on the [Beyondcoin Forums](https://forums.beyonddata.llc/).
 * Discuss general Beyondcoin development on #beyondcoin-dev on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=beyondcoin-dev).
 
 ### Miscellaneous

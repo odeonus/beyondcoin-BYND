@@ -33,7 +33,7 @@ Build Beyondcoin Core
 
 1. Clone the beyondcoin source code and cd into `beyondcoin`
 
-        git clone https://github.com/Tech1k/beyondcoin
+        git clone https://github.com/beyondcoin-project/beyondcoin
         cd beyondcoin
 
 2.  Build beyondcoin-core:

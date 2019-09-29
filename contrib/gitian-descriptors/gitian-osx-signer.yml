@@ -7,7 +7,7 @@ architectures:
 packages:
 - "faketime"
 remotes:
-- "url": "https://github.com/Tech1k/beyondcoin-detached-sigs.git"
+- "url": "https://github.com/beyondcoin-project/beyondcoin-detached-sigs.git"
   "dir": "signature"
 files:
 - "beyondcoin-osx-unsigned.tar.gz"
