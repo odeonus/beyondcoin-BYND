@@ -101,10 +101,10 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 999999999999ULL;
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000000000");
+        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000006600660");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x00"); //0
+        consensus.defaultAssumeValid = uint256S("0x22ae7a8bf33b2224bacf3de96bd37a81a5deabbe2396881a766ef130b33be7b2"); // 101
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -142,14 +142,14 @@ public:
 
         checkpointData = (CCheckpointData) {
             {
-                //{ 0, uint256S("")},
+                { 101, uint256S("b68ed98a2eec2ad04cef57262c7c0dc28bea21c96e0a4eadff204a9ca4537bb3")},
             }
         };
 
         chainTxData = ChainTxData{
-            // Data as of block 0a9e3b5fce3aee6e04f06dfd6ad380a6c0f9d8420f53a4ca97845756ee5d56e7 (height 0).
-            /* nTime    */ 0,
-            /* nTxCount */ 0,
+            // Data as of block 22ae7a8bf33b2224bacf3de96bd37a81a5deabbe2396881a766ef130b33be7b2 (height 101).
+            /* nTime    */ 1569698252,
+            /* nTxCount */ 1,
             /* dTxRate  */ 0
         };
     }
