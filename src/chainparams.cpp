@@ -101,10 +101,10 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 999999999999ULL;
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000000000");
+        consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000000000003bf01cee0");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x00"); // 0
+        consensus.defaultAssumeValid = uint256S("0xfea2ae3dbba276c7db1647d84ce6412068165ebb9d0f210e913a729ee94eca2a"); // 6250
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -142,15 +142,18 @@ public:
 
         checkpointData = (CCheckpointData) {
             {
-                // TODO: add checkpoints when blocks start to get mined on the Mainnet
+                { 1000, uint256S("7f069f1af637c110db6aafc9ae7d13d95baa27fc890dd7d13b0355d3778015f7")},
+                { 2500, uint256S("1120eaebb3f9560e70a73605cc42ae16ec8754c9f0b4132888e6d4f3292cc9aa")},
+                { 5000, uint256S("10b95abff6f1258b3329f498f2e94bce2dfd6bf6656f22ba7031101e12279305")},
+                { 6000, uint256S("54733000ef5dc7f1aec681ddadcfb322dcda28b4fee307787423e7446b1b8570")},
             }
         };
 
         chainTxData = ChainTxData{
-            // Data as of block 0a9e3b5fce3aee6e04f06dfd6ad380a6c0f9d8420f53a4ca97845756ee5d56e7 (height 0).
-            /* nTime    */ 0,
-            /* nTxCount */ 0,
-            /* dTxRate  */ 0
+            // Data from RPC: getchaintxstats 6250 fea2ae3dbba276c7db1647d84ce6412068165ebb9d0f210e913a729ee94eca2a
+            /* nTime    */ 1570762555,
+            /* nTxCount */ 6529,
+            /* dTxRate  */ 0.038
         };
     }
 };
