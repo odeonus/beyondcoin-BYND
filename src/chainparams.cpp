@@ -101,10 +101,10 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 999999999999ULL;
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000000000003bf01cee0");
+        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000003d6c91b4b5155");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0xfea2ae3dbba276c7db1647d84ce6412068165ebb9d0f210e913a729ee94eca2a"); // 6250
+        consensus.defaultAssumeValid = uint256S("0x5861580a17c1d8632fb0271310b0ed8e2cc95aa3dbf19a946065450948e7023b"); // 22500
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -145,15 +145,19 @@ public:
                 { 1000, uint256S("7f069f1af637c110db6aafc9ae7d13d95baa27fc890dd7d13b0355d3778015f7")},
                 { 2500, uint256S("1120eaebb3f9560e70a73605cc42ae16ec8754c9f0b4132888e6d4f3292cc9aa")},
                 { 5000, uint256S("10b95abff6f1258b3329f498f2e94bce2dfd6bf6656f22ba7031101e12279305")},
-                { 6000, uint256S("54733000ef5dc7f1aec681ddadcfb322dcda28b4fee307787423e7446b1b8570")},
+                ( 10000, uint256S("060ecd783a77947034fa079aa3dee3595c0d6dc57a686286cc51bbfb2ddd0262")),
+                { 15000, uint256S("ec6063faf4e9799164a9dc72c33bb803511320f42b70d30b73f7d6b0a5fec093")},
+                { 17500, uint256S("93c435ee0d5693d62bf0b3ed2cc5a7766750cd5b7d9625acfa9721dd5fe3a8e7")},
+                { 20000, uint256S("4e99237c29e5c8a19dc87beb423f853bccae8fb2df68a44a73df7dee0cda0a25")},
+                { 22500, uint256S("5861580a17c1d8632fb0271310b0ed8e2cc95aa3dbf19a946065450948e7023b")},
             }
         };
 
         chainTxData = ChainTxData{
-            // Data from RPC: getchaintxstats 6250 fea2ae3dbba276c7db1647d84ce6412068165ebb9d0f210e913a729ee94eca2a
-            /* nTime    */ 1570762555,
-            /* nTxCount */ 6529,
-            /* dTxRate  */ 0.038
+            // Data from RPC: getchaintxstats 22500 5861580a17c1d8632fb0271310b0ed8e2cc95aa3dbf19a946065450948e7023b
+            /* nTime    */ 1570995906,
+            /* nTxCount */ 23058,
+            /* dTxRate  */ 0.057
         };
     }
 };
