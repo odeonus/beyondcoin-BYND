@@ -8,7 +8,7 @@ Beyondcoin Core integration/staging tree [BYND, Ƀ]
 What is Beyondcoin?
 ----------------
 
-Beyondcoin is free open source peer-to-peer network based digital currency employing the fundamentals of Bitcoin, although it does not use SHA256 as its proof of work. Instead, Beyondcoin currently empolys a simplified variant of Scrypt as its proof of work (POW). Taking development cues from Tenebrix, Litecoin, and Dogecoin. Peer-to-peer (P2P) means that there is no central authority to issue new money or keep track of transactions. Instead, these tasks are managed collectively by the nodes of the network.
+Beyondcoin is free open source peer-to-peer network based digital currency employing the fundamentals of Bitcoin, although it does not use SHA256 as its proof of work. Instead, Beyondcoin currently employs a simplified variant of Scrypt as its proof of work (POW). Taking development cues from Tenebrix, Litecoin, and Dogecoin. Peer-to-peer (P2P) means that there is no central authority to issue new money or keep track of transactions. Instead, these tasks are managed collectively by the nodes of the network.
 
 [https://beyondcoin.beyonddata.llc](https://beyondcoin.beyonddata.llc).
 
