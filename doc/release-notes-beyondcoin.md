@@ -48,6 +48,7 @@ frequently tested on them.
 - `a6f84cf` Update release notes and manpages for v0.15.2 (Tech1k)
 - `e54ac50` Update link in src/init.cpp (Tech1k)
 - `34ab2f9` Update readme (Tech1k)
+- `01433c2` Add Tech1k gpg key (Tech1k)
 
 Credits
 =======
