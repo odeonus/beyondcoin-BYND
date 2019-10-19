@@ -42,7 +42,8 @@ Mainnet P2P Port               | 10333
 Testnet RPC Port               | 14332
 Testnet P2P Port               | 14333
 Block Time                     | 150 Seconds
-Block Maturity                 | 101 Blocks
+Coinbase Transaction Maturity  | 100 Blocks
+Confirmation                   | 6 Blocks
 Difficulty Adjustment Interval | 8064 Blocks
 Protocol Support               | IPV4, IPV6, TOR, I2P
 
