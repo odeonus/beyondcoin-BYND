@@ -36,6 +36,8 @@ frequently tested on them.
 ### Validation
 - `15e8103` Update checkpoints (Tech1k)
 - `ed74e01` [Fix]: Build error in chainparams.cpp (Tech1k)
+- `5ad7172` Update hardcoded seeds (Tech1k)
+- `e78c6b5` Update chainparams (Tech1k)
 
 ### Wallet
 - `735de4d` Update Denominations (Tech1k)
@@ -43,6 +45,9 @@ frequently tested on them.
 ### Miscellaneous
 - `59a925` Fix grammar (Tech1k)
 - `ccaeaef` Fix typo (Tech1k)
+- `a6f84cf` Update release notes and manpages for v0.15.2 (Tech1k)
+- `e54ac50` Update link in src/init.cpp (Tech1k)
+- `34ab2f9` Update readme (Tech1k)
 
 Credits
 =======
