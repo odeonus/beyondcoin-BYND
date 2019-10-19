@@ -10,7 +10,52 @@ What is Beyondcoin?
 
 Beyondcoin is A free open source peer-to-peer network based digital currency. Employing the fundamentals of Bitcoin, although it does not use SHA256 as its proof of work algorithm. Instead, Beyondcoin currently employs a simplified variant of Scrypt as its proof of work (POW). Taking development cues from Tenebrix, Litecoin, and Dogecoin. Peer-to-peer (P2P) means that there is no central authority to issue new money or keep track of transactions. Instead, these tasks are managed collectively by the nodes of the network.
 
-[https://bynd.beyonddata.llc](https://bynd.beyonddata.llc).
+[https://bynd.beyonddata.llc](https://bynd.beyonddata.llc)
+
+Table of Contents
+-----------------
+
+<!--ts--->
+- [Beyondcoin Core integration/staging tree [BYND, Ƀ]](#beyondcoin-core-integrationstaging-tree-bynd-%c9%83)
+  - [What is Beyondcoin?](#what-is-beyondcoin)
+  - [Table of Contents](#table-of-contents)
+  - [Specifications](#specifications)
+  - [Block Rewards](#block-rewards)
+  - [License](#license)
+  - [Development Process](#development-process)
+  - [Testing](#testing)
+    - [Automated Testing](#automated-testing)
+    - [Manual Quality Assurance (QA) Testing](#manual-quality-assurance-qa-testing)
+  - [Translations](#translations)
+<!--te-->
+
+Specifications
+--------------
+Specification | Descriptor
+------------- | ----------
+Ticker Symbol                  | BYND
+Algorithm                      | SCRYPT
+Maxiumum Supply                | 84000000
+SegWit                         | Activated
+Mainnet RPC Port               | 10332
+Mainnet P2P Port               | 10333
+Testnet RPC Port               | 14332
+Testnet P2P Port               | 14333
+Block Time                     | 150 Seconds
+Block Maturity                 | 101 Blocks
+Difficulty Adjustment Interval | 8064 Blocks
+Protocol Support               | IPV4, IPV6, TOR, I2P
+
+Block Rewards
+-------------
+Year | Block | Reward
+---- | ----- | ------
+2019-2023 | 1-840000        | 50 BYND
+2023-2027 | 840001-1680000  | 25 BYND
+2027-2041 | 1680001-2520000 | 12.5 BYND
+2041-2045 | 2520001-3360000 | 6.25 BYND
+2045-2049 | 3360001-4200000 | 3.125 BYND
+...       | ...             | ...
 
 License
 -------
@@ -32,12 +77,6 @@ should be used to discuss complicated or controversial changes before working
 on a patch set.
 
 Developer IRC can be found on Freenode at #beyondcoin-dev.
-
-Ports
------
-[MAINNET] RPC: 10332 P2P: 10333
-
-[TESTNET] RPC: 14332 P2P: 14333
 
 Testing
 -------
