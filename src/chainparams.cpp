@@ -84,8 +84,8 @@ public:
         consensus.nPowTargetSpacing = 2.5 * 60;
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
-        consensus.nRuleChangeActivationThreshold = 6048; // 75% of 8064
-        consensus.nMinerConfirmationWindow = 8064; // nPowTargetTimespan / nPowTargetSpacing * 4
+        consensus.nRuleChangeActivationThreshold = 192; // 75% of 256
+        consensus.nMinerConfirmationWindow = 256; // nPowTargetTimespan / nPowTargetSpacing * 4
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1199145601; // January 1, 2008
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1230767999; // December 31, 2008
@@ -101,10 +101,10 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 999999999999ULL;
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000000000fe1328cd2e5bc");
+        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000016cf87f8802744");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x51f9cd1ae434797273ea21708c710f5862079b6a5f06dae8352309139cc6ee4e"); // 24550
+        consensus.defaultAssumeValid = uint256S("0xf5680ad8438d612d27290f230ed099b98ef51ae6511ad2bd42fbf1b56cb4a9b7"); // 25000
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -154,14 +154,15 @@ public:
                 { 20000, uint256S("4e99237c29e5c8a19dc87beb423f853bccae8fb2df68a44a73df7dee0cda0a25")},
                 { 22500, uint256S("5861580a17c1d8632fb0271310b0ed8e2cc95aa3dbf19a946065450948e7023b")},
                 { 24550, uint256S("51f9cd1ae434797273ea21708c710f5862079b6a5f06dae8352309139cc6ee4e")},
+                { 25000, uint256S("f5680ad8438d612d27290f230ed099b98ef51ae6511ad2bd42fbf1b56cb4a9b7")},
             }
         };
 
         chainTxData = ChainTxData{
-            // Data from RPC: getchaintxstats 24550 51f9cd1ae434797273ea21708c710f5862079b6a5f06dae8352309139cc6ee4e
-            /* nTime    */ 1571462792,
-            /* nTxCount */ 25409,
-            /* dTxRate  */ 0.029
+            // Data from RPC: getchaintxstats 25000 f5680ad8438d612d27290f230ed099b98ef51ae6511ad2bd42fbf1b56cb4a9b7
+            /* nTime    */ 1572045529,
+            /* nTxCount */ 26056,
+            /* dTxRate  */ 0.018
         };
     }
 };
