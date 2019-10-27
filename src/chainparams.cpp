@@ -124,11 +124,14 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("0x7f4191b0b1f7438204e2642ca18d7a2799da9e39733667a75afbf89c3a3dddc2"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
-        vSeeds.emplace_back("dnsseed.beyonddata.llc", true);
-        vSeeds.emplace_back("bynd-main-dns1.beyonddata.llc", true);
+        vSeeds.emplace_back("dnsseed.beyondcoin.io", true);
+        vSeeds.emplace_back("bynd-main-dns1.beyondcoin.io", true);
+        vSeeds.emplace_back("bynd-main-dns2.beyondcoin.io", true);
+        vSeeds.emplace_back("bynd-main-dns3.beyondcoin.io", true);
         vSeeds.emplace_back("52.0.220.131:10333", true);
         vSeeds.emplace_back("52.11.0.47:10333", true);
         vSeeds.emplace_back("18.190.88.101:10333", true);
+        vSeeds.emplace_back("185.244.150.234:10333", true);
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,25);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
@@ -221,8 +224,9 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        vSeeds.emplace_back("testnet-seed.beyonddata.llc", true);
-        vSeeds.emplace_back("bynd-test-dns1.beyonddata.llc", true);
+        vSeeds.emplace_back("testnet-seed.beyondcoin.io", true);
+        vSeeds.emplace_back("bynd-test-dns1.beyondcoin.io", true);
+        vSeeds.emplace_back("bynd-test-dns2.beyondcoin.io", true);
         vSeeds.emplace_back("54.157.251.114:14333", true);
         vSeeds.emplace_back("52.13.212.231:14333", true);
 
