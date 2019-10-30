@@ -132,6 +132,8 @@ public:
         vSeeds.emplace_back("52.11.0.47:10333", true);
         vSeeds.emplace_back("18.190.88.101:10333", true);
         vSeeds.emplace_back("185.244.150.234:10333", true);
+        vSeeds.emplace_back("3.132.131.183:10333", true);
+        vSeeds.emplace_back("3.133.28.194:10333", true);
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,25);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
