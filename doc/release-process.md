@@ -265,7 +265,7 @@ Note: check that SHA256SUMS itself doesn't end up in SHA256SUMS, which is a spur
 
 ```
 
-- Update beyondcoin.beyonddata.llc version
+- Update beyondcoin.io version
 
 - Announce the release:
 

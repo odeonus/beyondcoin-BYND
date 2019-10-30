@@ -1,6 +1,6 @@
 Beyondcoin Core version *0.15.1* is now available from:
 
-  <https://www.beyonddata.llc/bin/beyondcoin-core-0.15.1/>
+  <https://beyondcoin.io/bin/beyondcoin-core-0.15.1/>
 
 This is a new major version release, including new features, various bugfixes
 and performance improvements, as well as updated translations.
