@@ -44,7 +44,7 @@ Testnet P2P Port               | 14333
 Block Time                     | 150 Seconds
 Coinbase Transaction Maturity  | 100 Blocks
 Confirmation                   | 6 Blocks
-Difficulty Adjustment Interval | 8064 Blocks
+Difficulty Adjustment Interval | 2016 Blocks
 Protocol Support               | IPV4, IPV6, TOR, I2P
 
 Block Rewards
