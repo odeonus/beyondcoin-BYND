@@ -656,8 +656,8 @@ UniValue getblockheader(const JSONRPCRequest& request)
             "\nResult (for verbose=false):\n"
             "\"data\"             (string) A string that is serialized, hex-encoded data for block 'hash'.\n"
             "\nExamples:\n"
-            + HelpExampleCli("getblockheader", "\"e2acdf2dd19a702e5d12a925f1e984b01e47a933562ca893656d4afb38b44ee3\"")
-            + HelpExampleRpc("getblockheader", "\"e2acdf2dd19a702e5d12a925f1e984b01e47a933562ca893656d4afb38b44ee3\"")
+            + HelpExampleCli("getblockheader", "\"5e3277b2f6d988288e2acda68d4894d3b62391dfd7f475c553592954c743f7a5\"")
+            + HelpExampleRpc("getblockheader", "\"5e3277b2f6d988288e2acda68d4894d3b62391dfd7f475c553592954c743f7a5\"")
         );
 
     LOCK(cs_main);
@@ -731,8 +731,8 @@ UniValue getblock(const JSONRPCRequest& request)
             "  ,...                     Same output as verbosity = 1.\n"
             "}\n"
             "\nExamples:\n"
-            + HelpExampleCli("getblock", "\"e2acdf2dd19a702e5d12a925f1e984b01e47a933562ca893656d4afb38b44ee3\"")
-            + HelpExampleRpc("getblock", "\"e2acdf2dd19a702e5d12a925f1e984b01e47a933562ca893656d4afb38b44ee3\"")
+            + HelpExampleCli("getblock", "\"5e3277b2f6d988288e2acda68d4894d3b62391dfd7f475c553592954c743f7a5\"")
+            + HelpExampleRpc("getblock", "\"5e3277b2f6d988288e2acda68d4894d3b62391dfd7f475c553592954c743f7a5\"")
         );
 
     LOCK(cs_main);
