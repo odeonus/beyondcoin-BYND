@@ -105,7 +105,7 @@ public:
         consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000000002e614059b820fd");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0xbd88a1b1518b9bbb1c0c65b334f02de97272b8c03d8ea457fc8827a27e3f27bc"); // 27500
+        consensus.defaultAssumeValid = uint256S("0xf8a1baa91a81fbede774878982b540d56cee4bbbfa8e5d6ce7e03d030172dd09"); // 28224
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -168,10 +168,10 @@ public:
         };
 
         chainTxData = ChainTxData{
-            // Data from RPC: getchaintxstats 27500 bd88a1b1518b9bbb1c0c65b334f02de97272b8c03d8ea457fc8827a27e3f27bc
-            /* nTime    */ 1573016515,
-            /* nTxCount */ 29648,
-            /* dTxRate  */ 0.012
+            // Data from RPC: getchaintxstats 28224 f8a1baa91a81fbede774878982b540d56cee4bbbfa8e5d6ce7e03d030172dd09
+            /* nTime    */ 1573765938,
+            /* nTxCount */ 36433,
+            /* dTxRate  */ 0.01
         };
     }
 };
