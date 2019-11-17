@@ -129,6 +129,18 @@ public:
         vSeeds.emplace_back("bynd-main-dns1.beyondcoin.io", true);
         vSeeds.emplace_back("bynd-main-dns2.beyondcoin.io", true);
         vSeeds.emplace_back("bynd-main-dns3.beyondcoin.io", true);
+        vSeeds.emplace_back("na1.beyondcoin.io", true);
+        vSeeds.emplace_back("na2.beyondcoin.io", true);
+        vSeeds.emplace_back("na3.beyondcoin.io", true);
+        vSeeds.emplace_back("as.beyondcoin.io", true);
+        vSeeds.emplace_back("au.beyondcoin.io", true);
+        vSeeds.emplace_back("eu.beyondcoin.io", true);
+        vSeeds.emplace_back("na1.byndnode.io", true);
+        vSeeds.emplace_back("na2.byndnode.io", true);
+        vSeeds.emplace_back("na3.byndnode.io", true);
+        vSeeds.emplace_back("as.byndnode.io", true);
+        vSeeds.emplace_back("au.byndnode.io", true);
+        vSeeds.emplace_back("eu.byndnode.io", true);
         vSeeds.emplace_back("52.0.220.131:10333", true);
         vSeeds.emplace_back("52.11.0.47:10333", true);
         vSeeds.emplace_back("18.190.88.101:10333", true);
