@@ -42,11 +42,11 @@ reachable from the Tor network. Add these lines to your /etc/tor/torrc (or equiv
 config file):
 
 	HiddenServiceDir /var/lib/tor/beyondcoin-service/
-	HiddenServicePort 9333 127.0.0.1:9333
-	HiddenServicePort 19335 127.0.0.1:19335
+	HiddenServicePort 10333 127.0.0.1:10333
+	HiddenServicePort 14333 127.0.0.1:14333
 
 The directory can be different of course, but (both) port numbers should be equal to
-your beyondcoind's P2P listen port (9333 by default).
+your beyondcoind's P2P listen port (10333 by default).
 
 	-externalip=X   You can tell beyondcoin about its publicly reachable address using
 	                this option, and this can be a .onion address. Given the above
@@ -81,7 +81,7 @@ as well, use `discover` instead:
 
 	./beyondcoind ... -discover
 
-and open port 9333 on your firewall (or use -upnp).
+and open port 10333 on your firewall (or use -upnp).
 
 If you only want to use Tor to reach onion addresses, but not use it as a proxy
 for normal IPv4/IPv6 communication, use:
