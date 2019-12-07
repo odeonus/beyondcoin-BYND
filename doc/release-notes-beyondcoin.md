@@ -1,6 +1,6 @@
 Beyondcoin Core version 0.16.3 is now available from:
 
-  <https://download.beyondcoin.org/beyondcoin-0.16.3/>
+  <https://beyondcoin.io/bin/beyondcoin-core-0.16.3/>
 
 This is a new minor version release, with various bugfixes
 as well as updated translations.
@@ -86,6 +86,7 @@ Thanks to everyone who directly contributed to this release:
 - voidmain
 - wbsmolen
 - xinxi
+- Kristian Kramer
 
 And to those that reported security issues:
 
