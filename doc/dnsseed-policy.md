@@ -1,5 +1,5 @@
 Expectations for DNS Seed operators
-====================================
+===================================
 
 Beyondcoin Core attempts to minimize the level of trust in DNS seeds,
 but DNS seeds still pose a small amount of risk for the network.

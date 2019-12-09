@@ -1,5 +1,5 @@
 Fuzz-testing Beyondcoin Core
-==========================
+============================
 
 A special test harness `test_beyondcoin_fuzzy` is provided to provide an easy
 entry point for fuzzers and the like. In this document we'll describe how to

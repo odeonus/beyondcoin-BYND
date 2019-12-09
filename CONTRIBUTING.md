@@ -276,6 +276,11 @@ The project leader is the release manager for each Beyondcoin Core release.
 
 Copyright
 ---------
+Copyright 2019-2020 The Beyondcoin Core Developers
+Copyright 2019-2020 Beyondcoin Core Developers
+
+- bitcoin: Copyright (c) 2009-2019 Bitcoin Core Developers (MIT License)
+- litecoin: Copyright (c) 2011-2019 The Litecoin Core Developers (MIT License)
 
 By contributing to this repository, you agree to license your work under the 
 MIT license unless specified otherwise in `contrib/debian/copyright` or at 

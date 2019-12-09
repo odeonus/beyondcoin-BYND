@@ -1,5 +1,5 @@
 WINDOWS BUILD NOTES
-====================
+===================
 
 Below are some notes on how to build Beyondcoin Core for Windows.
 
