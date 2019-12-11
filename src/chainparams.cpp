@@ -162,12 +162,12 @@ public:
         fMineBlocksOnDemand = false;
 
         checkpointData = (CCheckpointData) {
-            {                
-                { 0, uint256S("0a9e3b5fce3aee6e04f06dfd6ad380a6c0f9d8420f53a4ca97845756ee5d56e7")},
-                { 2016, uint256S("4634e6d5576aaeac9962aa71d4a14cbea593cbe2ee8dec3b35013c433a90e2e1")},
-                { 4032, uint256S("069e7c1ee71176920f1dcf03d8d6b0d39c811873d8e0a912ffbf96db235307a1")},
-                { 6048, uint256S("6690d77629136b546eace011747986e3f8e5262ba0f880713b7a6f086e0b278b")},
-                { 8064, uint256S("a74124dc8802f31a37d86777b6d972ab7b825d28f351ef3366d85aa48218b846")},
+            {
+                {     0, uint256S("0a9e3b5fce3aee6e04f06dfd6ad380a6c0f9d8420f53a4ca97845756ee5d56e7")},
+                {  2016, uint256S("4634e6d5576aaeac9962aa71d4a14cbea593cbe2ee8dec3b35013c433a90e2e1")},
+                {  4032, uint256S("069e7c1ee71176920f1dcf03d8d6b0d39c811873d8e0a912ffbf96db235307a1")},
+                {  6048, uint256S("6690d77629136b546eace011747986e3f8e5262ba0f880713b7a6f086e0b278b")},
+                {  8064, uint256S("a74124dc8802f31a37d86777b6d972ab7b825d28f351ef3366d85aa48218b846")},
                 { 10080, uint256S("8995e6b36b94eb3bcc6258d65fc13b95f03115fee10a3c0e1593e58130f38783")},
                 { 12096, uint256S("161dd4ef5904c58c42b8ca1854bcc1ad7d26e346293b31d7f0bee706ee87394a")},
                 { 14112, uint256S("0efac2da1f2aba9329dca6884898630c11a87010125b418983be7fef13601c58")},
