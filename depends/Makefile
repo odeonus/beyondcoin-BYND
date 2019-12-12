@@ -8,7 +8,7 @@ NO_WALLET ?=
 NO_UPNP ?=
 FALLBACK_DOWNLOAD_PATH ?= https://bitcoincore.org/depends-sources
 
-BUILD = $(shell ./config.guess)
+BUILD = $(shell bash ./config.guess)
 HOST ?= $(BUILD)
 PATCHES_PATH = $(BASEDIR)/patches
 BASEDIR = $(CURDIR)
@@ -33,8 +33,8 @@ endif
 base_build_dir=$(BASEDIR)/work/build
 base_staging_dir=$(BASEDIR)/work/staging
 base_download_dir=$(BASEDIR)/work/download
-canonical_host:=$(shell ./config.sub $(HOST))
-build:=$(shell ./config.sub $(BUILD))
+canonical_host:=$(shell bash ./config.sub $(HOST))
+build:=$(shell bash ./config.sub $(BUILD))
 
 build_arch =$(firstword $(subst -, ,$(build)))
 build_vendor=$(word 2,$(subst -, ,$(build)))
