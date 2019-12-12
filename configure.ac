@@ -34,6 +34,9 @@ AH_BOTTOM([#endif //BITCOIN_CONFIG_H])
 dnl faketime breaks configure and is only needed for make. Disable it here.
 unset FAKETIME
 
+dnl Compiling by source needs for share/genbuild.sh to be able to execute
+chmod +x share/genbuild.sh
+
 dnl Automake init set-up and checks
 AM_INIT_AUTOMAKE([no-define subdir-objects foreign])
 
