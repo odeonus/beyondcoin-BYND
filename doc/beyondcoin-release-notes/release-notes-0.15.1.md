@@ -1,6 +1,6 @@
-Beyondcoin Core version *0.15.0* is now available from:
+Beyondcoin Core version *0.15.1* is now available from:
 
-  <https://download.beyondcoin.org/beyondcoin-0.15.0/>
+  <https://beyondcoin.io/bin/beyondcoin-core-0.15.1/>
 
 This is a new major version release, including new features, various bugfixes
 and performance improvements, as well as updated translations.
@@ -21,30 +21,6 @@ shut down (which might take a few minutes for older versions), then run the
 installer (on Windows) or just copy over `/Applications/Beyondcoin-Qt` (on Mac)
 or `beyondcoind`/`beyondcoin-qt` (on Linux).
 
-The first time you run version 0.15.0, your chainstate database will be converted to a
-new format, which will take anywhere from a few minutes to half an hour,
-depending on the speed of your machine.
-
-The file format of `fee_estimates.dat` changed in version 0.15.0. Hence, a
-downgrade from version 0.15.0 or upgrade to version 0.15.0 will cause all fee
-estimates to be discarded.
-
-Note that the block database format also changed in version 0.8.0 and there is no
-automatic upgrade code from before version 0.8 to version 0.15.0. Upgrading
-directly from 0.7.x and earlier without redownloading the blockchain is not supported.
-However, as usual, old wallet versions are still supported.
-
-Downgrading warning
--------------------
-
-The chainstate database for this release is not compatible with previous
-releases, so if you run 0.15 and then decide to switch back to any
-older version, you will need to run the old release with the `-reindex-chainstate`
-option to rebuild the chainstate data structures in the old format.
-
-If your node has pruning enabled, this will entail re-downloading and
-processing the entire blockchain.
-
 Compatibility
 ==============
 
@@ -56,6 +32,8 @@ frequently tested on them.
 
 Notable changes
 ===============
+
+- Port to Beyondcoin
 
 Performance Improvements
 ------------------------
@@ -145,7 +123,7 @@ Beyondcoin Core 0.15.0 contains the following changes to the RPC interface and `
 
 * When running Beyondcoin Core with a single wallet, there are **no** changes to the RPC interface or `beyondcoin-cli`. All RPC calls and `beyondcoin-cli` commands continue to work as before.
 * When running Beyondcoin Core with multi-wallet, all *node-level* RPC methods continue to work as before. HTTP RPC requests should be send to the normal `<RPC IP address>:<RPC port>/` endpoint, and `beyondcoin-cli` commands should be run as before. A *node-level* RPC method is any method which does not require access to the wallet.
-* When running Beyondcoin Core with multi-wallet, *wallet-level* RPC methods must specify the wallet for which they're intended in every request. HTTP RPC requests should be send to the `<RPC IP address>:<RPC port>/wallet/<wallet name>/` endpoint, for example `127.0.0.1:9332/wallet/wallet1.dat/`. `beyondcoin-cli` commands should be run with a `-rpcwallet` option, for example `beyondcoin-cli -rpcwallet=wallet1.dat getbalance`.
+* When running Beyondcoin Core with multi-wallet, *wallet-level* RPC methods must specify the wallet for which they're intended in every request. HTTP RPC requests should be send to the `<RPC IP address>:<RPC port>/wallet/<wallet name>/` endpoint, for example `127.0.0.1:10332/wallet/wallet1.dat/`. `beyondcoin-cli` commands should be run with a `-rpcwallet` option, for example `beyondcoin-cli -rpcwallet=wallet1.dat getbalance`.
 * A new *node-level* `listwallets` RPC method is added to display which wallets are currently loaded. The names returned by this method are the same as those used in the HTTP endpoint and for the `rpcwallet` argument.
 
 Note that while multi-wallet is now fully supported, the RPC multi-wallet interface should be considered unstable for version 0.15.0, and there may backwards-incompatible changes in future versions.
@@ -283,8 +261,8 @@ Low-level RPC changes
   - `bumpfee` now returns RPC_WALLET_ERROR if the change output is too small to bump the
   fee. Previously returned RPC_MISC_ERROR.
 
-0.15.0 Change log
-=================
+0.15.0-0.15.1 Change log
+=========================
 
 ### RPC and other APIs
 - #9485 `61a640e` ZMQ example using python3 and asyncio (mcelrath)
@@ -484,7 +462,7 @@ Low-level RPC changes
 ### Wallet
 - #9359 `f7ec7cf` Add test for CWalletTx::GetImmatureCredit() returning stale values (ryanofsky)
 - #9576 `56ab672` [wallet] Remove redundant initialization (practicalswift)
-- #9333 `fa625b0` Document CWalletTx::mapValue entries and remove erase of nonexistent "version" entry (ryanofsky)
+- #10333 `fa625b0` Document CWalletTx::mapValue entries and remove erase of nonexistent "version" entry (ryanofsky)
 - #9906 `72fb515` Disallow copy constructor CReserveKeys (instagibbs)
 - #9369 `3178b2c` Factor out CWallet::nTimeSmart computation into a method (ryanofsky)
 - #9830 `afcd7c0` Add safe flag to listunspent result (NicolasDorier)
@@ -771,3 +749,4 @@ Thanks to everyone who directly contributed to this release:
 - ultragtx
 - voidmain
 - xinxi
+- Kristian Kramer
