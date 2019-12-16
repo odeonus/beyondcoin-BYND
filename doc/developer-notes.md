@@ -5,35 +5,38 @@ Developer Notes
 **Table of Contents**
 
 - [Developer Notes](#developer-notes)
-    - [Coding Style (General)](#coding-style-general)
-    - [Coding Style (C++)](#coding-style-c)
-    - [Doxygen comments](#doxygen-comments)
-    - [Coding Style (Python)](#coding-style-python)
-    - [Development tips and tricks](#development-tips-and-tricks)
-        - [Compiling for debugging](#compiling-for-debugging)
-        - [Compiling for gprof profiling](#compiling-for-gprof-profiling)
-        - [debug.log](#debuglog)
-        - [Testnet and Regtest modes](#testnet-and-regtest-modes)
-        - [DEBUG_LOCKORDER](#debug_lockorder)
-        - [Valgrind suppressions file](#valgrind-suppressions-file)
-        - [Compiling for test coverage](#compiling-for-test-coverage)
-    - [Locking/mutex usage notes](#lockingmutex-usage-notes)
-    - [Threads](#threads)
-    - [Ignoring IDE/editor files](#ignoring-ideeditor-files)
+  - [Coding Style (General)](#coding-style-general)
+  - [Coding Style (C++)](#coding-style-c)
+  - [Doxygen comments](#doxygen-comments)
+  - [Coding Style (Python)](#coding-style-python)
+  - [Development tips and tricks](#development-tips-and-tricks)
+    - [Compiling for debugging](#compiling-for-debugging)
+    - [Compiling for gprof profiling](#compiling-for-gprof-profiling)
+    - [debug.log](#debuglog)
+    - [Testnet and Regtest modes](#testnet-and-regtest-modes)
+    - [DEBUG_LOCKORDER](#debuglockorder)
+    - [Valgrind suppressions file](#valgrind-suppressions-file)
+    - [Compiling for test coverage](#compiling-for-test-coverage)
+  - [Locking/mutex usage notes](#lockingmutex-usage-notes)
+  - [Threads](#threads)
+  - [Ignoring IDE/editor files](#ignoring-ideeditor-files)
 - [Development guidelines](#development-guidelines)
-    - [General Beyondcoin Core](#general-beyondcoin-core)
-    - [Wallet](#wallet)
-    - [General C++](#general-c)
-    - [C++ data structures](#c-data-structures)
-    - [Strings and formatting](#strings-and-formatting)
-    - [Variable names](#variable-names)
-    - [Threads and synchronization](#threads-and-synchronization)
-    - [Source code organization](#source-code-organization)
-    - [GUI](#gui)
-    - [Subtrees](#subtrees)
-    - [Git and GitHub tips](#git-and-github-tips)
-    - [Scripted diffs](#scripted-diffs)
-    - [RPC interface guidelines](#rpc-interface-guidelines)
+  - [General Beyondcoin Core](#general-beyondcoin-core)
+  - [Wallet](#wallet)
+  - [General C++](#general-c)
+  - [C++ data structures](#c-data-structures)
+  - [Strings and formatting](#strings-and-formatting)
+  - [Variable names](#variable-names)
+  - [Threads and synchronization](#threads-and-synchronization)
+  - [Source code organization](#source-code-organization)
+  - [GUI](#gui)
+  - [Subtrees](#subtrees)
+  - [Upgrading LevelDB](#upgrading-leveldb)
+    - [File Descriptor Counts](#file-descriptor-counts)
+    - [Consensus Compatibility](#consensus-compatibility)
+  - [Git and GitHub tips](#git-and-github-tips)
+  - [Scripted diffs](#scripted-diffs)
+  - [RPC interface guidelines](#rpc-interface-guidelines)
 
 <!-- markdown-toc end -->
 
@@ -336,7 +339,7 @@ Threads
 
 - ThreadMapPort : Universal plug-and-play startup/shutdown
 
-- ThreadSocketHandler : Sends/Receives data from peers on port 9333.
+- ThreadSocketHandler : Sends/Receives data from peers on port 10333.
 
 - ThreadOpenAddedConnections : Opens network connections to added nodes.
 
@@ -346,7 +349,7 @@ Threads
 
 - DumpAddresses : Dumps IP addresses of nodes to peers.dat.
 
-- ThreadRPCServer : Remote procedure call handler, listens on port 9332 for connections and services them.
+- ThreadRPCServer : Remote procedure call handler, listens on port 10332 for connections and services them.
 
 - Shutdown : Does an orderly shutdown of everything.
 
