@@ -47,7 +47,7 @@ static const int MAX_URI_LENGTH = 255;
 #define SPINNER_FRAMES 36
 
 #define QAPP_ORG_NAME "Beyondcoin"
-#define QAPP_ORG_DOMAIN "beyondcoin.org"
+#define QAPP_ORG_DOMAIN "beyondcoin.io"
 #define QAPP_APP_NAME_DEFAULT "Beyondcoin-Qt"
 #define QAPP_APP_NAME_TESTNET "Beyondcoin-Qt-testnet"
 
