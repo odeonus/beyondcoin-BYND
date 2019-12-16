@@ -139,6 +139,10 @@ way. This will install to `c:\workspace\beyondcoin`, for example:
 
     make install DESTDIR=/mnt/c/workspace/beyondcoin
 
+You can also create an installer using:
+
+    make deploy
+
 Footnotes
 ---------
 
