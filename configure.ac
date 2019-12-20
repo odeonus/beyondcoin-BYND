@@ -121,7 +121,7 @@ AC_ARG_ENABLE([upnp-default],
 AC_ARG_ENABLE(tests,
     AS_HELP_STRING([--disable-tests],[do not compile tests (default is to compile)]),
     [use_tests=$enableval],
-    [use_tests=yes])
+    [use_tests=no])
 
 AC_ARG_ENABLE(gui-tests,
     AS_HELP_STRING([--disable-gui-tests],[do not compile GUI tests (default is to compile if GUI and tests enabled)]),
@@ -148,7 +148,7 @@ AC_ARG_ENABLE([hardening],
   [AS_HELP_STRING([--disable-hardening],
   [do not attempt to harden the resulting executables (default is to harden)])],
   [use_hardening=$enableval],
-  [use_hardening=no])
+  [use_hardening=yes])
 
 AC_ARG_ENABLE([reduce-exports],
   [AS_HELP_STRING([--enable-reduce-exports],
