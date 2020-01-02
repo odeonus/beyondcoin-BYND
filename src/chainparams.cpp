@@ -82,7 +82,7 @@ public:
         consensus.BIP34Hash = uint256S("0xe36273167b0b9711be2ecddd761091aa5e716a19352df2e1aa91bf5b4f7f6d00");
         consensus.BIP65Height = 100; // e36273167b0b9711be2ecddd761091aa5e716a19352df2e1aa91bf5b4f7f6d00
         consensus.BIP66Height = 100; // e36273167b0b9711be2ecddd761091aa5e716a19352df2e1aa91bf5b4f7f6d00
-        consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); 
+        consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 3.5 * 24 * 60 * 60; // 3.5 days
         consensus.nPowTargetSpacing = 2.5 * 60;
         consensus.fPowAllowMinDifficultyBlocks = false;
@@ -126,7 +126,11 @@ public:
         assert(consensus.hashGenesisBlock == uint256S("0x0a9e3b5fce3aee6e04f06dfd6ad380a6c0f9d8420f53a4ca97845756ee5d56e7"));
         assert(genesis.hashMerkleRoot == uint256S("0x7f4191b0b1f7438204e2642ca18d7a2799da9e39733667a75afbf89c3a3dddc2"));
 
-        // Note that of those with the service bits flag, most only support a subset of possible options
+        // Note that of those with the service bits flag, most only support a subset of
+        // possible options.
+        // This is fine at runtime as we'll fall back to using them as a oneshot if they don't support the
+        // service bits we want, but we should get them updated to support all service bits wanted by any
+        // release ASAP to avoid it where possible.
         vSeeds.emplace_back("dnsseed.beyondcoin.io");
         vSeeds.emplace_back("bynd-main-dns1.beyondcoin.io");
         vSeeds.emplace_back("bynd-main-dns2.beyondcoin.io");
