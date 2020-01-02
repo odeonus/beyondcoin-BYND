@@ -41,11 +41,11 @@ const std::string CLIENT_NAME("BeyondcoinCore");
 #include <obj/build.h>
 #endif
 
-//! git will put "#define GIT_ARCHIVE 1" on the next line inside archives. 
+//! git will put "#define GIT_ARCHIVE 1" on the next line inside archives.
 #define GIT_ARCHIVE 1
 #ifdef GIT_ARCHIVE
-#define GIT_COMMIT_ID "1b6c480754d559db3650b226178d9221ec46b4d2"
-#define GIT_COMMIT_DATE "Mon, 8 Apr 2019 15:28:20 +0800"
+#define GIT_COMMIT_ID "ac331e93b9fdc199535fc3b8c6d9432db9bd6786"
+#define GIT_COMMIT_DATE "Wed Jan 1 23:32:40 2020 +0700"
 #endif
 
 #define BUILD_DESC_WITH_SUFFIX(maj, min, rev, build, suffix) \
