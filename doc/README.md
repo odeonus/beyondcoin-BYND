@@ -28,10 +28,10 @@ Drag Beyondcoin-Core to your applications folder, and then run Beyondcoin-Core.
 
 ### Need Help?
 
-* See the documentation at the [Beyondcoin Wiki](https://beyondcoin.info/)
+* See the documentation at the [Beyondcoin Wiki](https://beyondcoinwiki.com/)
 for help and more information.
 * Ask for help on [#beyondcoin](http://webchat.freenode.net?channels=beyondcoin) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=beyondcoin).
-* Ask for help on the [BeyondcoinTalk](https://beyondcointalk.io/) forums.
+* Ask for help on the [BeyondcoinForum](https://beyondcoinforum.com/).
 
 Building
 ---------------------
@@ -61,7 +61,7 @@ The Beyondcoin repo's [root README](/README.md) contains relevant information on
 - [Benchmarking](benchmarking.md)
 
 ### Resources
-* Discuss on the [BeyondcoinTalk](https://beyondcointalk.io/) forums.
+* Discuss on the [BeyondcoinForum](https://beyondcoinforum.com/).
 * Discuss general Beyondcoin development on #beyondcoin-dev on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=beyondcoin-dev).
 
 ### Miscellaneous
