@@ -79,7 +79,7 @@ public:
         consensus.nSubsidyHalvingInterval = 840000;
         consensus.BIP16Height = 1; // 5e3277b2f6d988288e2acda68d4894d3b62391dfd7f475c553592954c743f7a5
         consensus.BIP34Height = 1; // 5e3277b2f6d988288e2acda68d4894d3b62391dfd7f475c553592954c743f7a5
-        consensus.BIP34Hash = uint256S("0xe36273167b0b9711be2ecddd761091aa5e716a19352df2e1aa91bf5b4f7f6d00");
+        consensus.BIP34Hash = uint256S("0x5e3277b2f6d988288e2acda68d4894d3b62391dfd7f475c553592954c743f7a5");
         consensus.BIP65Height = 100; // e36273167b0b9711be2ecddd761091aa5e716a19352df2e1aa91bf5b4f7f6d00
         consensus.BIP66Height = 100; // e36273167b0b9711be2ecddd761091aa5e716a19352df2e1aa91bf5b4f7f6d00
         consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
