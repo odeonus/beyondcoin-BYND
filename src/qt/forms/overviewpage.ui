@@ -586,6 +586,7 @@
          </property>
          <property name="font">
           <font>
+           <pointsize>10</pointsize>
            <italic>true</italic>
           </font>
          </property>
