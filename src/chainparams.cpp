@@ -1,5 +1,6 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2009-2018 The Bitcoin Core developers
+// Copyright (c) 2019-2020 Beyondtoshi
 // Copyright (C) 2019-2020 The Beyondcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -78,10 +79,10 @@ public:
         consensus.nSubsidyHalvingInterval = 840000;
         consensus.BIP16Height = 1; // 5e3277b2f6d988288e2acda68d4894d3b62391dfd7f475c553592954c743f7a5
         consensus.BIP34Height = 1; // 5e3277b2f6d988288e2acda68d4894d3b62391dfd7f475c553592954c743f7a5
-        consensus.BIP34Hash = uint256S("0xe36273167b0b9711be2ecddd761091aa5e716a19352df2e1aa91bf5b4f7f6d00");
+        consensus.BIP34Hash = uint256S("0x5e3277b2f6d988288e2acda68d4894d3b62391dfd7f475c553592954c743f7a5");
         consensus.BIP65Height = 100; // e36273167b0b9711be2ecddd761091aa5e716a19352df2e1aa91bf5b4f7f6d00
         consensus.BIP66Height = 100; // e36273167b0b9711be2ecddd761091aa5e716a19352df2e1aa91bf5b4f7f6d00
-        consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); 
+        consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 3.5 * 24 * 60 * 60; // 3.5 days
         consensus.nPowTargetSpacing = 2.5 * 60;
         consensus.fPowAllowMinDifficultyBlocks = false;
@@ -155,7 +156,7 @@ public:
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,25);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
-        base58Prefixes[SCRIPT_ADDRESS2] = std::vector<unsigned char>(1,25);
+        base58Prefixes[SCRIPT_ADDRESS2] = std::vector<unsigned char>(1,26);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,176);
         base58Prefixes[EXT_PUBLIC_KEY] = {0xff, 0x88, 0xB2, 0x1E};
         base58Prefixes[EXT_SECRET_KEY] = {0xff, 0x88, 0xAD, 0xE4};
@@ -185,15 +186,16 @@ public:
                 { 36288, uint256S("3c4891e8bda65bbd45e6f7ab63d257afaffd04fa341f7f6afd2d765b14486356")},
                 { 44352, uint256S("a93d5e64828d81f398942528fa8117758586248d63c2601120373f3c60df4929")},
                 { 52416, uint256S("48525f181fef67737ae4902b0602e412ff98c42521f9f2f0e96e2bc8d027abf2")},
-                //{ 60480, uint256S("")},
+                { 60480, uint256S("bd3e841ad2cbbd522e1e92d617dcae2e5c226457ef1330e82db1b06c04230e14")},
+                //{ 68544, uint256S("")},
             }
         };
 
         chainTxData = ChainTxData{
-            // Data from rpc: getchaintxstats 52416 48525f181fef67737ae4902b0602e412ff98c42521f9f2f0e96e2bc8d027abf2
-            /* nTime    */ 1577741146,
-            /* nTxCount */ 63978,
-            /* dTxRate  */ 0.009
+            // Data from RPC: getchaintxstats 60480 48525f181fef67737ae4902b0602e412ff98c42521f9f2f0e96e2bc8d027abf2
+            /* nTime    */ 1580078025,
+            /* nTxCount */ 77668,
+            /* dTxRate  */ 0.008
         };
 
         /* disable fallback fee on mainnet */
