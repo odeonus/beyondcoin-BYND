@@ -1,6 +1,6 @@
 <!-- This issue tracker is only for technical issues related to Beyondcoin Core.
 
-General beyondcoin questions and/or support requests are best directed to the [beyondcointalk.com forums](https://beyondcointalk.com/) or the Beyondcoin Discord server in the support channel at https://discord.gg/j3BUcJU.
+General beyondcoin questions and/or support requests are best directed to the [beyondcoinforum.com forums](https://beyondcoinforum.com/) or the Beyondcoin Discord server in the support channel at https://discord.gg/j3BUcJU.
 
 For reporting security issues, please contact the Beyondcoin developers on the #beyondcoin-dev Freenode IRC channel or alternatively you can email us at security@beyondcoin.io.
 
