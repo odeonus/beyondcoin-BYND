@@ -138,6 +138,12 @@ void WalletFrame::gotoSendCoinsPage(QString addr)
         i.value()->gotoSendCoinsPage(addr);
 }
 
+void WalletFrame::gotoManageDomainsPage()
+{
+    for(const auto &i : mapWalletViews)
+        i->gotoManageDomainsPage();
+}
+
 void WalletFrame::gotoSignMessageTab(QString addr)
 {
     WalletView *walletView = currentWalletView();

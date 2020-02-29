@@ -4089,6 +4089,48 @@ bool CWallet::BackupWallet(const std::string& strDest)
     return dbw->Backup(strDest);
 }
 
+bool CWallet::PendingDomainFirstUpdateExists(const std::string &domain)
+{
+    LOCK(cs_wallet);
+    return domainPendingMap.end() != domainPendingMap.find(domain);
+}
+
+bool CWallet::WritePendingDomainFirstUpdate(const std::string &domain, const std::string &rand, const std::string &txid, const std::string &data, const std::string &toaddress)
+{
+    LOCK(cs_wallet);
+    CDomainPendingData domainData;
+    domainData.setHex(txid);
+    domainData.setRand(rand);
+    domainData.setData(data);
+    domainData.setToAddress(toaddress);
+    bool success = CWalletDB(*dbw).WriteDomainFirstUpdate(domain, domainData);
+    if(success)
+        domainPendingMap[domain] = domainData;
+
+    return success;
+}
+
+bool CWallet::ErasePendingDomainFirstUpdate(const std::string &domain)
+{
+    LOCK(cs_wallet);
+    bool success = CWalletDB(*dbw).EraseDomainFirstUpdate(domain);
+    if(success)
+        domainPendingMap.erase(domain);
+    return success;
+}
+
+bool CWallet::GetPendingDomainFirstUpdate(const std::string &domain, CDomainPendingData *data)
+{
+    LOCK(cs_wallet);
+    std::map<std::string, CDomainPendingData> pn = domainPendingMap;
+    std::map<std::string, CDomainPendingData>::iterator it = pn.find(domain);
+    if (it == pn.end())
+        return false;
+    if (data)
+        (*data) = it->second;
+    return true;
+}
+
 CKeyPool::CKeyPool()
 {
     nTime = GetTime();

@@ -19,6 +19,9 @@
 #include <wallet/walletdb.h>
 #include <wallet/rpcwallet.h>
 
+#include "domains/common.h"
+#include "script/domains.h"
+
 #include <algorithm>
 #include <atomic>
 #include <map>
@@ -1158,6 +1161,18 @@ public:
      * This function will automatically add the necessary scripts to the wallet.
      */
     CTxDestination AddAndGetDestinationForScript(const CScript& script, OutputType);
+
+    std::map<std::string, CDomainPendingData> domainPendingMap;
+
+    bool PendingDomainFirstUpdateExists(const std::string &domain);
+    bool WritePendingDomainFirstUpdate(
+            const std::string &domain,
+            const std::string &rand,
+            const std::string &txid,
+            const std::string &data,
+            const std::string &toaddress);
+    bool ErasePendingDomainFirstUpdate(const std::string &domain);
+    bool GetPendingDomainFirstUpdate(const std::string &domain, CDomainPendingData *data=nullptr);
 };
 
 /** A key allocated from the key pool. */

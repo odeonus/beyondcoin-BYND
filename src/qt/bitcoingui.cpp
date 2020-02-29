@@ -8,6 +8,7 @@
 #include <qt/clientmodel.h>
 #include <qt/guiconstants.h>
 #include <qt/guiutil.h>
+#include <qt/managedomainspage.h>
 #include <qt/mempoolstats.h>
 #include <qt/modaloverlay.h>
 #include <qt/networkstyle.h>
@@ -44,6 +45,7 @@
 #include <QMenuBar>
 #include <QMessageBox>
 #include <QMimeData>
+#include <QProgressBar>
 #include <QProgressDialog>
 #include <QSettings>
 #include <QShortcut>
@@ -316,6 +318,17 @@ void BitcoinGUI::createActions()
     historyAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_4));
     tabGroup->addAction(historyAction);
 
+    manageDomainsAction = new QAction(QIcon(":/icons/bitcoin"), tr("&Manage Names"), this);
+    manageDomainsAction->setStatusTip(tr("Manage names registered via Beyondcoin"));
+    manageDomainsAction->setToolTip(manageDomainsAction->statusTip());
+    manageDomainsAction->setCheckable(true);
+    manageDomainsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_6));
+    tabGroup->addAction(manageDomainsAction);
+
+    manageDomainsMenuAction = new QAction(QIcon(":/icons/bitcoin"), manageDomainsAction->text(), this);
+    manageDomainsMenuAction->setStatusTip(manageDomainsAction->statusTip());
+    manageDomainsMenuAction->setToolTip(manageDomainsMenuAction->statusTip());
+
 #ifdef ENABLE_WALLET
     // These showNormalIfMinimized are needed because Send Coins and Receive Coins
     // can be triggered from the tray menu, and need to show the GUI to be useful.
@@ -331,6 +344,8 @@ void BitcoinGUI::createActions()
     connect(receiveCoinsMenuAction, SIGNAL(triggered()), this, SLOT(gotoReceiveCoinsPage()));
     connect(historyAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
     connect(historyAction, SIGNAL(triggered()), this, SLOT(gotoHistoryPage()));
+    connect(manageDomainsAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
+    connect(manageDomainsAction, SIGNAL(triggered()), this, SLOT(gotoManageNamesPage()));
 #endif // ENABLE_WALLET
 
     quitAction = new QAction(platformStyle->TextColorIcon(":/icons/quit"), tr("E&xit"), this);
@@ -472,6 +487,7 @@ void BitcoinGUI::createToolBars()
         toolbar->addAction(sendCoinsAction);
         toolbar->addAction(receiveCoinsAction);
         toolbar->addAction(historyAction);
+        toolbar->addAction(manageDomainsAction);
         overviewAction->setChecked(true);
     }
 }
@@ -571,6 +587,7 @@ void BitcoinGUI::setWalletActionsEnabled(bool enabled)
     receiveCoinsAction->setEnabled(enabled);
     receiveCoinsMenuAction->setEnabled(enabled);
     historyAction->setEnabled(enabled);
+    manageDomainsAction->setEnabled(enabled);
     encryptWalletAction->setEnabled(enabled);
     backupWalletAction->setEnabled(enabled);
     changePassphraseAction->setEnabled(enabled);
@@ -618,6 +635,7 @@ void BitcoinGUI::createTrayIconMenu()
     trayIconMenu->addSeparator();
     trayIconMenu->addAction(sendCoinsMenuAction);
     trayIconMenu->addAction(receiveCoinsMenuAction);
+    trayIconMenu->addAction(manageDomainsMenuAction);
     trayIconMenu->addSeparator();
     trayIconMenu->addAction(signMessageAction);
     trayIconMenu->addAction(verifyMessageAction);
@@ -725,6 +743,12 @@ void BitcoinGUI::gotoSendCoinsPage(QString addr)
 {
     sendCoinsAction->setChecked(true);
     if (walletFrame) walletFrame->gotoSendCoinsPage(addr);
+}
+
+void BitcoinGUI::gotoManageDomainsPage()
+{
+    manageDomainsAction->setChecked(true);
+    if (walletFrame) walletFrame->gotoManageDomainsPage();
 }
 
 void BitcoinGUI::gotoSignMessageTab(QString addr)
