@@ -5,6 +5,7 @@
 #include <qt/bitcoingui.h>
 
 #include <qt/bitcoinunits.h>
+#include <qt/chatwindow.h>
 #include <qt/clientmodel.h>
 #include <qt/guiconstants.h>
 #include <qt/guiutil.h>
@@ -53,6 +54,7 @@
 #include <QTimer>
 #include <QToolBar>
 #include <QVBoxLayout>
+#include <QtWidgets>
 
 #if QT_VERSION < 0x050000
 #include <QTextDocument>
@@ -316,6 +318,16 @@ void BitcoinGUI::createActions()
     historyAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_4));
     tabGroup->addAction(historyAction);
 
+    chatboxPageAction = new QAction(QIcon(":/icons/gears"), tr("&Chat"), this);
+    chatboxPageAction->setToolTip(tr("Open chat in your wallet"));
+    chatboxPageAction->setCheckable(true);
+    chatboxPageAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_6));
+    tabGroup->addAction(chatboxPageAction);
+
+    chatboxMenuAction = new QAction(QIcon(":/icons/gears"), chatboxPageAction->text(), this);
+    chatboxMenuAction->setStatusTip(chatboxPageAction->statusTip());
+    chatboxMenuAction->setToolTip(chatboxMenuAction->statusTip());
+
 #ifdef ENABLE_WALLET
     // These showNormalIfMinimized are needed because Send Coins and Receive Coins
     // can be triggered from the tray menu, and need to show the GUI to be useful.
@@ -331,6 +343,8 @@ void BitcoinGUI::createActions()
     connect(receiveCoinsMenuAction, SIGNAL(triggered()), this, SLOT(gotoReceiveCoinsPage()));
     connect(historyAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
     connect(historyAction, SIGNAL(triggered()), this, SLOT(gotoHistoryPage()));
+    connect(chatboxPageAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
+    connect(chatboxPageAction, SIGNAL(triggered()), this, SLOT(gotochatboxPage()));
 #endif // ENABLE_WALLET
 
     quitAction = new QAction(platformStyle->TextColorIcon(":/icons/quit"), tr("E&xit"), this);
@@ -472,6 +486,7 @@ void BitcoinGUI::createToolBars()
         toolbar->addAction(sendCoinsAction);
         toolbar->addAction(receiveCoinsAction);
         toolbar->addAction(historyAction);
+        toolbar->addAction(chatboxPageAction);
         overviewAction->setChecked(true);
     }
 }
@@ -571,6 +586,7 @@ void BitcoinGUI::setWalletActionsEnabled(bool enabled)
     receiveCoinsAction->setEnabled(enabled);
     receiveCoinsMenuAction->setEnabled(enabled);
     historyAction->setEnabled(enabled);
+    chatboxPageAction->setEnabled(enabled);
     encryptWalletAction->setEnabled(enabled);
     backupWalletAction->setEnabled(enabled);
     changePassphraseAction->setEnabled(enabled);
@@ -618,6 +634,7 @@ void BitcoinGUI::createTrayIconMenu()
     trayIconMenu->addSeparator();
     trayIconMenu->addAction(sendCoinsMenuAction);
     trayIconMenu->addAction(receiveCoinsMenuAction);
+    trayIconMenu->addAction(chatboxMenuAction);
     trayIconMenu->addSeparator();
     trayIconMenu->addAction(signMessageAction);
     trayIconMenu->addAction(verifyMessageAction);
@@ -725,6 +742,15 @@ void BitcoinGUI::gotoSendCoinsPage(QString addr)
 {
     sendCoinsAction->setChecked(true);
     if (walletFrame) walletFrame->gotoSendCoinsPage(addr);
+}
+
+void BitcoinGUI::gotochatboxPage()
+{
+    chatboxPageAction->setChecked(true);
+    if (walletFrame) walletFrame->gotochatboxPage();
+
+    exportAction->setEnabled(false);
+    disconnect(exportAction, SIGNAL(triggered()), 0, 0);
 }
 
 void BitcoinGUI::gotoSignMessageTab(QString addr)
@@ -1298,4 +1324,22 @@ void UnitDisplayStatusBarControl::onMenuSelection(QAction* action)
     {
         optionsModel->setDisplayUnit(action->data());
     }
+}
+
+void BitcoinGUI::postMessage(QString &mess)
+{
+printf("postMessage called\n");
+  QString strStatusBarWarnings = clientModel->getStatusBarWarnings();
+  if (strStatusBarWarnings.isEmpty())
+  {
+    progressBarLabel->setText(mess);
+//    progressBarLabel->setText(tr("someone just joined"));
+    progressBar->setVisible(false);
+    progressBarLabel->setVisible(true);
+printf("user joined %s\n",mess.toStdString().c_str());
+  }
+  else
+  {
+    printf("if strStatusBarWarnings.isEmpty() failed. \n");
+  }
 }
