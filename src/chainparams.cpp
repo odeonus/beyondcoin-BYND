@@ -322,9 +322,9 @@ public:
         nDefaultPort = 11333;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1568523445, 32306, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1568523445, 0, 0x207fffff, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0xe4d3c5acff29b5a4c03a2f78f8f9a5c2f077e886a99205a0c3c1515ff414f529"));
+        assert(consensus.hashGenesisBlock == uint256S("0xaf6448d165f850f94accc66e7d763a656da14413579f8cda8ee4176dddfd4bed"));
         assert(genesis.hashMerkleRoot == uint256S("0x7f4191b0b1f7438204e2642ca18d7a2799da9e39733667a75afbf89c3a3dddc2"));
 
         vFixedSeeds.clear(); //!< Regtest mode doesn't have any fixed seeds.
@@ -336,7 +336,7 @@ public:
 
         checkpointData = (CCheckpointData) {
             {
-                { 0, uint256S("e4d3c5acff29b5a4c03a2f78f8f9a5c2f077e886a99205a0c3c1515ff414f529")},
+                { 0, uint256S("af6448d165f850f94accc66e7d763a656da14413579f8cda8ee4176dddfd4bed")},
             }
         };
 
@@ -346,7 +346,7 @@ public:
             0
         };
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,86);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196);
         base58Prefixes[SCRIPT_ADDRESS2] = std::vector<unsigned char>(1,58);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,86);
